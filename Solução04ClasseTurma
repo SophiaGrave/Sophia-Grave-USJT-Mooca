@@ -7,44 +7,44 @@ public class Turma
     private int serie;
 
     // método construtor
-    public Aluno(String n, String c, int q, int s) {
-    nome = n;
-    curso = c; 
-    quantidadeDeAlunos = q; 
-    serie = s;
+    public Turma(String n, String c, int q, int s) {
+       nome = n;
+       curso = c; 
+       quantidadeDeAlunos = q; 
+       serie = s;
     }
 
     // métodos de acesso
     public String getNome() {
-    return nome;
+       return nome;
     }
 
     public String getCurso() {
-    return curso;
+       return curso;
     } 
     
     public int getQuantidadeDeAlunos() {
-     return quantidadeDeAlunos;
+       return quantidadeDeAlunos;
     }
 
     public int getSerie() {
-    return serie;
+       return serie;
     }
 
     // métodos modificadores
     public void setNome(String n) {
-    nome = n;
+       nome = n;
     }
 
     public void setCurso(String c) {
-    curso = c;
+       curso = c;
     }
 
     public void setQuantidadeDeAlunos(int q) {
-    quantidadeDeAlunos = q;
+       quantidadeDeAlunos = q;
     }
 
     public void setSerie(int s) {
-    serie = s;
+       serie = s;
    }
 }
