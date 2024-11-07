@@ -1,0 +1,35 @@
+public class ClasseProfessor
+{
+    //atributos
+    private String nome;
+    private int idade;
+
+    // metodo construtor
+    public Professor(String n, int i) {
+      nome = n;
+      idade = i;
+    }
+
+    // método de acesso
+    public String getNome() {
+        return nome;
+    }
+    
+    public int getIdade() {
+        return idade;
+    }
+
+    //método modificadores
+    public void setNome(String n) {
+        nome = n;      
+    }
+    
+    public void setIdade(int i) {
+        idade = i;
+    }
+    
+    //método getDados
+    public String getDados(){
+      return "ClasseProfessor[nome=" + nome + ",idade=" + idade +"]";
+    }
+}

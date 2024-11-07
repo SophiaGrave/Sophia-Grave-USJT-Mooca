@@ -1,0 +1,39 @@
+public class Agencia {
+    private String nome;
+    private int numero;
+    private int digito;
+
+    public Agencia(String nome, int numero, int digito) {
+        if (numero <= 0 || numero > 9999) {
+            throw new IllegalArgumentException("O número da agência deve ter no máximo 4 dígitos e ser positivo.");
+        }
+        this.nome = nome;
+        this.numero = numero;
+        this.digito = calculaDigito(numero);
+        if (this.digito != digito) {
+            throw new IllegalArgumentException("Dígito inválido para o número da agência.");
+        }
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public int getDigito() {
+        return digito;
+    }
+
+    private int calculaDigito(int numero) {
+        int primeiro = (numero / 1000) % 10;
+        int segundo = (numero / 100) % 10;
+        int terceiro = (numero / 10) % 10;
+        int quarto = numero % 10;
+        int soma = primeiro * 4 + segundo * 6 + terceiro * 8 + quarto * 2;
+        int digitoCalculado = soma % 11;
+        return digitoCalculado == 10 ? 0 : digitoCalculado;
+    }
+}

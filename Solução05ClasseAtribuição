@@ -1,0 +1,36 @@
+public class ClasseAtribuição
+{
+    // Atributos 
+    private Professor professor;
+    private Disciplina disciplina;
+
+    // Construtor
+    public Atribuicao(Professor professor, Disciplina disciplina) {
+        this.professor = professor;
+        this.disciplina = disciplina;
+    }
+
+    // Métodos de acesso 
+    public Professor getProfessor() {
+        return professor;
+    }
+
+    public Disciplina getDisciplina() {
+        return disciplina;
+    }
+
+    // Métodos modificadores 
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
+    }
+
+    public void setDisciplina(Disciplina disciplina) {
+        this.disciplina = disciplina;
+    }
+
+    // Método getDados para exibir os atributos
+    public String getDados() {
+        return "Atribuicao [Professor=" + professor.getDados() + 
+               ", Disciplina=" + disciplina.getDados() + "]";
+    }
+}

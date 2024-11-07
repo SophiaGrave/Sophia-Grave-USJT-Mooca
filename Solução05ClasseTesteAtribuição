@@ -1,0 +1,32 @@
+import javax.swing.JOptionPane;
+
+public class TesteAtribuicao 
+ {
+    public static void main(String[] args) {
+        // Pede os dados do Professor
+        String nomeProfessor = JOptionPane.showInputDialog("Informe o nome do Professor:");
+        int idadeProfessor = Integer.parseInt(JOptionPane.showInputDialog("Informe a idade do Professor:"));
+
+        // Cria o objeto Professor
+        Professor professor = new Professor(nomeProfessor, idadeProfessor);
+
+        // Pede os dados da Disciplina
+        String nomeDisciplina = JOptionPane.showInputDialog("Informe o nome da Disciplina:");
+
+        // Pergunta se a disciplina é prática (Sim ou Não)
+        String praticaResposta = JOptionPane.showInputDialog("A disciplina é prática? (Sim ou Não)");
+
+        // Defini o valor booleano com base na resposta do usuário
+        boolean pratica = praticaResposta.equalsIgnoreCase("Sim");
+
+        // Cria o objeto Disciplina
+        Disciplina disciplina = new Disciplina(nomeDisciplina, pratica);
+
+        // Cria a Atribuição associando o Professor e a Disciplina
+        Atribuicao atribuicao = new Atribuicao(professor, disciplina);
+
+        // Mostra os dados da Atribuição
+        JOptionPane.showMessageDialog(null, atribuicao.getDados());
+    }
+}
+
