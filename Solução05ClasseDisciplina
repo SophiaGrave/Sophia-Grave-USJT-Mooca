@@ -1,0 +1,35 @@
+public class ClasseDisciplina 
+{
+    // Atributos 
+    private String nome;
+    private boolean pratica;
+
+    // Construtor
+    public Disciplina(String nome, boolean pratica) {
+        this.nome = nome;
+        this.pratica = pratica;
+    }
+
+    // Métodos de acesso 
+    public String getNome() {
+        return nome;
+    }
+
+    public boolean isPratica() {
+        return pratica;
+    }
+
+    // Métodos modificadores 
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setPratica(boolean pratica) {
+        this.pratica = pratica;
+    }
+
+    // Método getDados para exibir os atributos
+    public String getDados() {
+        return "Disciplina [nome=" + nome + ", prática=" + pratica + "]";
+    }
+}
