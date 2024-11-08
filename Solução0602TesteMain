@@ -1,0 +1,23 @@
+public class TesteMain 
+{
+    public static void main(String[] soso) 
+    {
+        PessoaFisica pessoa = new PessoaFisica("Sophia", "Grave", "123.456.789-00", 0);
+        System.out.println(pessoa.dados());
+
+        Desempregado desempregado = new Desempregado("Maria", "Santos", "123.456.789-00", 5500.0);
+        System.out.println(desempregado.dados());
+
+        Empregado empregado = new Empregado("Ana", "Joana", "987.654.321-00", 2000.0);
+        System.out.println(empregado.dados());
+
+        Mensalista mensalista = new Mensalista("Julia", "Lima", "789.456.123-00", 4500.0);
+        System.out.println(mensalista.dados());
+
+        Tarifeiro tarifeiro = new Tarifeiro("Carol", "Silva", "321.64.987-00", 7000.0);
+        System.out.println(tarifeiro.dados());
+        
+        Vendedor vendedor = new Vendedor("Fernanda", "Santos", "646.284.291-00", 1400.0);
+        System.out.println(vendedor.dados());
+    }
+}
